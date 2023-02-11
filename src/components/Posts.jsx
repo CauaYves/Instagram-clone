@@ -19,6 +19,18 @@ function Post(props) {
         setLike('assets/heart-red.svg')
     }
 
+    const [save, setSave] = useState('bookmark-outline')
+
+    function savePost(ico){
+
+        if(ico === 'bookmark-outline'){
+            setSave('bookmark')
+        }else{
+            setSave('bookmark-outline')
+        }
+
+    }
+
     return (
         <div className="post" data-test="post">
             <div className="topo">
@@ -43,7 +55,7 @@ function Post(props) {
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
                     <div>
-                        <ion-icon name="bookmark-outline" data-test="save-post"></ion-icon>
+                        <ion-icon name={save} data-test="save-post" onClick={() => savePost(save)} ></ion-icon>
                     </div>
                 </div>
 
