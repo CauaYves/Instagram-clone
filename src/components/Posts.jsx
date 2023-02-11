@@ -19,10 +19,8 @@ function Post(props) {
         setLike('assets/heart-red.svg')
     }
 
-    
-
     return (
-        <div className="post">
+        <div className="post" data-test="post">
             <div className="topo">
                 <div className="usuario">
                     <img src={`assets/${props.profile}.svg`} alt="profile" />
@@ -34,25 +32,25 @@ function Post(props) {
             </div>
 
             <div className="conteudo">
-                <img src={`assets/${props.post}.svg`} alt="post" onClick={() => likePostImg()} />
+                <img src={`assets/${props.post}.svg`} alt="post" onClick={() => likePostImg()} data-test="post-image"/>
             </div>
 
             <div className="fundo">
                 <div className="acoes">
                     <div>
-                        <img src={like} className="icon" alt="heart" onClick={ () => likePost(like) } />
+                        <img src={like} className="icon" alt="heart" onClick={ () => likePost(like) } data-test="like-post"/>
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
                     <div>
-                        <ion-icon name="bookmark-outline"></ion-icon>
+                        <ion-icon name="bookmark-outline" data-test="save-post"></ion-icon>
                     </div>
                 </div>
 
                 <div className="curtidas">
                     <img src={`assets/${props.knewProf}.svg`} alt="knew profile" />
                     <div className="texto">
-                        Curtido por <strong>respondeai</strong> e <strong>outras 101.523 pessoas</strong>
+                        Curtido por <strong>respondeai</strong> e <strong>outras <span data-test="likes-number">{props.likes}</span> pessoas</strong>
                     </div>
                 </div>
             </div>
@@ -68,16 +66,19 @@ export default function Posts() {
             profile: 'meowed',
             post: 'gato-telefone',
             knewProf: 'respondeai',
+            likes: 1925
         },
         {
             profile: 'barked',
             post: 'dog',
             knewProf: 'adorable_animals',
+            likes: 129
         },
         {
             profile: '9gag',
             post: 'gato-telefone',
             knewProf: 'smallcutecats',
+            likes: 455
         }
     ]
 
@@ -85,7 +86,7 @@ export default function Posts() {
     return (
         <div className="posts">
             {ImgsPosts.map((i) => {
-                return <Post profile={i.profile} post={i.post} knewProf={i.knewProf} />
+                return <Post profile={i.profile} post={i.post} knewProf={i.knewProf} likes={i.likes}/>
             })}
         </div>
     )
