@@ -313,8 +313,13 @@ ion-icon {
     visibility: visible;
 }
 
-.usuario ion-icon {
+.usuario ion-icon, .icon {
     margin-left: 5px;
     padding-top: 5px;
     color: black;
+}
+
+.icon{
+    margin-right: 5px;
+    width: 24px;
 }

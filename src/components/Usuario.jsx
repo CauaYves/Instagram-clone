@@ -2,7 +2,6 @@ import { useState } from "react"
 
 export default function Usuario() {
 
-    const [name, setName] = useState('@driven-aluno')
     const [foto, setFoto] = useState('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0DCAdN8tADNbaWWmJ-Uu2imt-27pXoI_0544hFsCc9g&s')
 
     function changeFoto() {
@@ -13,6 +12,8 @@ export default function Usuario() {
             setFoto(newFoto)
         }
     }
+
+    const [name, setName] = useState('@driven-aluno')
 
     function changeName() {
         const newName = prompt('digite seu nome')

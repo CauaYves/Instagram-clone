@@ -1,6 +1,20 @@
-// (onde cada item será um componente diferente, o Post)
+import { useState } from "react"
 
 function Post(props) {
+
+    const [like, setLike] = useState('assets/heart-outline.svg')
+
+    function likePost(param){
+
+        console.log(param)
+        if(param === "assets/heart-outline.svg"){
+            setLike('assets/heart-red.svg')
+        }else{
+            setLike('assets/heart-outline.svg')
+        }
+
+    }
+
     return (
         <div className="post">
             <div className="topo">
@@ -20,7 +34,7 @@ function Post(props) {
             <div className="fundo">
                 <div className="acoes">
                     <div>
-                        <ion-icon name="heart-outline"></ion-icon>
+                        <img src={like} className="icon" alt="heart" onClick={ () => likePost(like) } />
                         <ion-icon name="chatbubble-outline"></ion-icon>
                         <ion-icon name="paper-plane-outline"></ion-icon>
                     </div>
@@ -61,10 +75,11 @@ export default function Posts() {
         }
     ]
 
+
     return (
         <div className="posts">
-            {ImgsPosts.map((i) => { 
-               return <Post profile={i.profile} post={i.post} knewProf={i.knewProf} /> 
+            {ImgsPosts.map((i) => {
+                return <Post profile={i.profile} post={i.post} knewProf={i.knewProf} />
             })}
         </div>
     )
