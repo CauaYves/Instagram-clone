@@ -26,7 +26,7 @@ function SugestItem(props) {
     )
 }
 
-export default function Sugestoes() {
+export default function Sugestao() {
     return (
         sugestDatas.map((i) => {
             return <SugestItem profile={i} />

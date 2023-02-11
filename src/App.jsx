@@ -18,8 +18,9 @@ export default function Lista() {
                 <div class="sidebar">
                     
                     <Usuario />
+                    <div className="sugestoes">
                     <Sugestoes />
-                    
+                    </div>
 
                     <div class="links">
                         Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes •
