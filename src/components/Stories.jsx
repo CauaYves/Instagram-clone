@@ -21,11 +21,11 @@ const profilesImg = [
 ]
 function StoryItem(props) {
     return (
-        <div class="story">
-            <div class="imagem">
+        <div className="story">
+            <div className="imagem">
                 <img src={props.imagem} alt="post"/>
             </div>
-            <div class="usuario">
+            <div className="usuario">
                 {props.name}
             </div>
         </div>
@@ -34,7 +34,7 @@ function StoryItem(props) {
 
 export default function Stories() {
     return (
-        <div class="stories">
+        <div className="stories">
             {profilesImg.map((i) => <StoryItem imagem={`/assets/${i}.svg`} name={i}/> )}
         </div>
     )
