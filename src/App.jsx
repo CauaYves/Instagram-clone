@@ -1,8 +1,8 @@
-import NavBar from "./NavBar"
-import Stories from "./Stories"
-import Posts from "./Posts"
-import Usuario from "./Usuario"
-import Sugestoes from "./Sugestoes"
+import NavBar from "./components/NavBar"
+import Stories from "./components/Stories"
+import Posts from "./components/Posts"
+import Usuario from "./components/Usuario"
+import Sugestoes from "./components/Sugestoes"
 
 export default function Lista() {
     return (
