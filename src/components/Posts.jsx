@@ -15,6 +15,12 @@ function Post(props) {
 
     }
 
+    function likePostImg(){
+        setLike('assets/heart-red.svg')
+    }
+
+    
+
     return (
         <div className="post">
             <div className="topo">
@@ -28,7 +34,7 @@ function Post(props) {
             </div>
 
             <div className="conteudo">
-                <img src={`assets/${props.post}.svg`} alt="post" />
+                <img src={`assets/${props.post}.svg`} alt="post" onClick={() => likePostImg()} />
             </div>
 
             <div className="fundo">
