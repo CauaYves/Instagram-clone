@@ -9,14 +9,21 @@ function Post(props) {
         console.log(param)
         if(param === "assets/heart-outline.svg"){
             setLike('assets/heart-red.svg')
+            setLikeds(likeds+1)
         }else{
             setLike('assets/heart-outline.svg')
+            setLikeds(likeds-1)
         }
 
     }
 
-    function likePostImg(){
-        setLike('assets/heart-red.svg')
+    function likePostImg(ico){
+        if(ico === 'assets/heart-red.svg'){
+            return
+        }else{
+            setLike('assets/heart-red.svg')
+            setLikeds(likeds+1)
+        }
     }
 
     const [save, setSave] = useState('bookmark-outline')
@@ -31,6 +38,8 @@ function Post(props) {
 
     }
 
+    const [likeds, setLikeds] = useState(props.likes)
+
     return (
         <div className="post" data-test="post">
             <div className="topo">
@@ -44,7 +53,7 @@ function Post(props) {
             </div>
 
             <div className="conteudo">
-                <img src={`assets/${props.post}.svg`} alt="post" onClick={() => likePostImg()} data-test="post-image"/>
+                <img src={`assets/${props.post}.svg`} alt="post" onClick={() => likePostImg(like)} data-test="post-image"/>
             </div>
 
             <div className="fundo">
@@ -62,7 +71,7 @@ function Post(props) {
                 <div className="curtidas">
                     <img src={`assets/${props.knewProf}.svg`} alt="knew profile" />
                     <div className="texto">
-                        Curtido por <strong>respondeai</strong> e <strong>outras <span data-test="likes-number">{props.likes}</span> pessoas</strong>
+                        Curtido por <strong>respondeai</strong> e <strong>outras <span data-test="likes-number">{likeds}</span> pessoas</strong>
                     </div>
                 </div>
             </div>
