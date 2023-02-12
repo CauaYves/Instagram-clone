@@ -1,5 +1,15 @@
 <h1 align="center">Instagram</h1>  
 
+#### 📝 Descrição
+
+- Para trabalhar os conceitos aprendidos nesta semana, vamos recuperar o nosso segundo projeto da formação: o Instagram! 😄
+- Como o propósito desta vez não é treinar *layout*, estamos entregando junto a este mini projeto um Instagram completo, nas mesmas especificações do projeto que fizeram. A única diferença é a adição de um botão de editar ao lado do nome do usuário.
+- Neste mini projeto vocês devem transformar o projeto entregue num projeto React, com os requisitos descritos abaixo.
+
+## 😎Preview
+![image](https://user-images.githubusercontent.com/108950428/218316267-87a54f2a-63aa-47cb-9455-150a8e3a784c.png)
+
+
 [📸 clique aqui para acessar o deploy](https://glittering-haupia-d39827.netlify.app/)
 
 <details>
