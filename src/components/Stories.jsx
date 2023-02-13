@@ -35,7 +35,7 @@ function StoryItem(props) {
 export default function Stories() {
     return (
         <div className="stories">
-            {profilesImg.map((i) => <StoryItem imagem={`/assets/${i}.svg`} name={i}/> )}
+            {profilesImg.map((i) => <StoryItem key={i} imagem={`/assets/${i}.svg`} name={i}/> )}
         </div>
     )
 }

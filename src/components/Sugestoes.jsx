@@ -29,7 +29,7 @@ function SugestItem(props) {
 export default function Sugestao() {
     return (
         sugestDatas.map((i) => {
-            return <SugestItem profile={i} />
+            return <SugestItem key={i} profile={i} />
         })
     )
 }
